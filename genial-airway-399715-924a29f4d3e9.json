@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "genial-airway-399715",
+  "private_key_id": "924a29f4d3e9490cfc5bbf9269cdc1aab71e66c5",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCCB++0wZ77eopY\nP4I1XBNzmT6SnTgxKMjffNe2jSfOXWI8ZECjBbClbJGVafIquFUpOcJijIc5tNZS\nRx866yyBVZ0mxjJr9rqsHBzdTJ+MEhA9lMbFasGLCDBC4jx45poW1y2eVvwV2Vps\nivwXTamHYihPnVgv1fxttcBI8fghC2WI/+f4Is5l2OC5P3q4O2bFKy009ig1KX02\nQ05/buD/ILUOZavNlwR7PnpTIXkFEZaQfbbYM4QUrWoNKzZPqgtS2x9uxghVhaw4\nAt6fmHLU1MvxEXZoWQm5atFjJ/8v9jbWXSX7kbGWKbRuHkhDqh0LjLTQxIJcbA+8\njEfdvwgNAgMBAAECggEAHiby+cpQMGZpAC+x5Oe2Bv9JGDxm1FdtxQ0xBD7VNTBI\nYFKq/mKKZMG5PJl1s1xNOyMOpUWK8eGyNSAS6Nmx10fgCia5eHmdLd3S/6oN8TAb\nHfyK3ypzOOcsMcY+WZa3soYxKN9o0zQ0mKjd7hVvM1qamGOXGHiZcWNM9F1PuXGT\nezJBgxi4BrvzrplfVXzNVNFunjDaqL58tbxU9fWtRFm8UrRgfYn3dSjFmyiNcfSm\n6fXkoD7gSaq8RJhA0Qc+7TWDdYGt/FjsqyIWNTbDjnLhPUNynWl6g9CK0qMGncMw\n8fn6s9jo/LkV5cWIuyEfpiHxlViP3R9A7Vxr8xligQKBgQC21VAQLFbqdpzaX02U\nwu+PN/MH6v7eH6XhoSp/5xOObWSzkf2arZ4L7ogMAZCP4JFekgmsyVZZylsDsPeV\n9tPGAOIvFjPLW7pp3Y8Hxcq3jlijPVnzgmMqmHIN+PCLXYFvrgpOufUbWnMnUZCL\n3H8+dmyWVDBIVX+q+KC+oy5cLQKBgQC2ETNGohEBTiipkwQtO8rGfl2aQMtKqd6M\nb0Loqr2/Hup4k2OD7YvllF+YwODDxVbh2ltVgaPmClNgww0Tu8TnZjaU9Y0tH65N\nN7ip+DF6KgaVSQXtyO8myMjx/VA+oLcAlKy3dH3L0yKr7JqyzoiRRkdj/Gqhu5sD\nM/yhAXhnYQKBgB15U9fXngdcKbsWZAZYSpA2/8nF+2JJjc9K0PQfh0qNng9IuK5n\n0LOxt2LgGbLoC+dH+aFOL8p30aZNsAwP52HjIJNgq+bbmbiZTAZ/v0dJ/kYKjOax\nnVTvkGtqNzTwVP5w+x5n4fiP40JyZq/1Utn581VkqwfuKI+iVx+EZOPdAoGAfG+V\nFBmAddvtfri0ihXrqW6EmwDd8NHZATKqEEtiFFYU+wQBaBHbI7YdAFITTLp7fzG2\nauKIGpnEEsY9Eder5Fu/wl9xdf3JK42B8OlpJ43Bohaerr4+dcuVS49OYP+HFCaJ\nRXmg4MYVVFwJ/1uZi3D1KilC1/dZIv9NEt3mZQECgYBuC3/2JpR+5k3Pm8T3jqVs\nJJd85bNNZvaXVjjKB5Xc0zNWhrBzpHvxyG+uSLDAsi4aL7vx2F2WJ3jHqlHKLLNQ\n4/kuf3WSrpZ68gDQzZeozl9Z6LvMA9tn3vk0GwD1HRZDCPlD8MSDKtSae0rxHl9w\n/QuRALQcnPW0jB2mPIWZKQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "scraping-fashionstudio@genial-airway-399715.iam.gserviceaccount.com",
+  "client_id": "104603603593610884065",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/scraping-fashionstudio%40genial-airway-399715.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

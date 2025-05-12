@@ -1,41 +1,38 @@
+import unittest
+from unittest.mock import patch
 import pandas as pd
-import numpy as np
+from utils.transform import transform
 
-class transform :
+class TestTransform(unittest.TestCase):
 
-  ''' change from USD to rupiah, change datatypes, erase nulls/unknown values '''
+    def setUp(self):
+        self.data = [
+            {'title': 'Product test 1', 'price': '$100', 'ratings': '4.5', 'colors': '1', 'timestamp': '2025-05-12 10:00:00'},
+            {'title': 'Product testt2', 'price': '$200', 'ratings': '4.0', 'colors': '2', 'timestamp': '2025-05-12 11:05:00'}
+        ]
+        self.rate = 16000
 
-  def data_df (self,data):
-    df = pd.DataFrame(data)
-    return df
+    @patch.object(transform, 'data_df')
+    @patch.object(transform, 'clean_df')
+    @patch.object(transform, 'currency_exchange')
+    @patch.object(transform, 'dtype_change')
+    
+    def test_full_transform(self, mock_dtype_change, mock_currency_exchange, mock_clean_df, mock_data_df):
 
-  def clean_df(self,df):
-    df.dropna(inplace=True)
-    df.drop_duplicates(inplace=True)
-    df = df[df['price'] != 'Not Available']
-    df = df[df['title'] != 'Unknown Product']
-    df = df[df['ratings'] != 'Rating']
-    df = df[df['ratings'] != 'Not Rated']
-    return df
+        transformer = transform()
+        mock_df = pd.DataFrame(self.data)
+        mock_data_df.return_value = mock_df
+        mock_clean_df.return_value = mock_df
+        mock_currency_exchange.return_value = mock_df
+        mock_dtype_change.return_value = mock_df
 
-  def currency_exchange(self, df, rate):
-    df['price'] = df['price'].str.replace(r'[\$,]', '', regex=True).astype(float)
-    df['price'] = df['price'] * rate
-    return df
+        result = transformer.full_transform(self.data, self.rate)
 
-  def dtype_change(self, df):
-    df['ratings'] = df['ratings'].astype(float)
-    df['colors'] = df['colors'].astype(int)
-    df['timestamp'] = pd.to_datetime(df['timestamp'])
-    return df
+        self.assertIsInstance(result, pd.DataFrame)
+        mock_data_df.assert_called_once_with(self.data)
+        mock_clean_df.assert_called_once_with(mock_df)
+        mock_currency_exchange.assert_called_once_with(mock_df, self.rate)
+        mock_dtype_change.assert_called_once_with(mock_df)
 
-  def full_transform(self, data, rate ):
-    try:
-      df = self.data_df(data)
-      df = self.clean_df(df)
-      df = self.currency_exchange(df, rate)
-      df = self.dtype_change(df)
-      return df
-
-    except Exception as e:
-      print(f'error : {e}')
+if __name__ == '__main__':
+    unittest.main()

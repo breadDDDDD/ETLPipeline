@@ -44,7 +44,6 @@ class TestWebScraper(unittest.TestCase):
     def test_scrape_web(self, mock_fetch):
         mock_fetch.return_value = self.sample_html
         result = scrape_web("https://example.com")
-        
         self.assertIsInstance(result, list)
         self.assertGreater(len(result), 0)
         
@@ -59,14 +58,14 @@ class TestWebScraper(unittest.TestCase):
         self.assertIn('timestamp', item)
 
     @patch('utils.extract.fetch')
-    def test_scrape_web_empty_content(self, mock_fetch):
+    def test_empty_content(self, mock_fetch):
         mock_fetch.return_value = None
         result = scrape_web("https://example.com")
         
         self.assertEqual(result, [])
 
     @patch('utils.extract.fetch')
-    def test_scrape_web_no_next_page(self, mock_fetch):
+    def test_nonext_page(self, mock_fetch):
         mock_fetch.return_value = self.sample_html
         result = scrape_web("https://example.com")
         

@@ -3,14 +3,15 @@ from utils.extract import scrape_web
 from utils.transform import transform
 from utils.load import connection_db
 from utils.load import sheet_load
+import os
 
 def main():
 
   ''' Main function to run all '''
   try:
     url = 'https://fashion-studio.dicoding.dev/'
-    db_url = 'postgresql://developer:1234@localhost:5432/scrapingdb'
-    service ='genial-airway-399715-924a29f4d3e9.json'
+    db_url = os.getenv('DB_URL')
+    service = os.getenv('SERVICE_ACCOUNT_FILE')
     scope = ['https://www.googleapis.com/auth/spreadsheets']
     ID ='1ngffKhq3dLPz-edYyinx3xDXQa0ftmgljsdbqxkx1iM'
     range_name ='Sheet1'

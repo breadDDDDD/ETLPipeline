@@ -11,7 +11,7 @@ def main():
   try:
     url = 'https://fashion-studio.dicoding.dev/'
     db_url = os.getenv('DB_URL')
-    service = os.getenv('SERVICE_ACCOUNT_FILE')
+    service = 'genial-airway-399715-41e4ca609414.json'
     scope = ['https://www.googleapis.com/auth/spreadsheets']
     ID ='1ngffKhq3dLPz-edYyinx3xDXQa0ftmgljsdbqxkx1iM'
     range_name ='Sheet1'
